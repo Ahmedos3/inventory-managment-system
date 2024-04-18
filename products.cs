@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DGVPrinterHelper;
 
 namespace inventory_managment_system
 {
@@ -95,6 +87,7 @@ namespace inventory_managment_system
             btnADD.Enabled = true;
             btnEdit.Enabled = true;
             btnDelete.Enabled = true;
+            pictureBox2.Enabled = true;
             opencheck = true;
             MessageBox.Show("file opened", "excellent", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
@@ -261,6 +254,7 @@ namespace inventory_managment_system
             }
 
             //close the program
+
             this.Close();
 
         }
@@ -291,6 +285,37 @@ namespace inventory_managment_system
 
         private void accounts_Load(object sender, EventArgs e)
         {
+            t_pName.KeyDown += t_pName_KeyDown;
+        }
+
+        private void t_pID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                t_pName.Focus();
+            }
+        }
+        private void t_pName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                t_pQTY.Focus();
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Inventory Report";//Heade
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date.ToString("MM/dd/yyyy"));
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "IMS";//Footer
+            printer.FooterSpacing = 15;
+            printer.PrintDataGridView(producttable);
 
         }
     }

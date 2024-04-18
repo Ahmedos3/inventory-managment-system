@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace inventory_managment_system
+﻿namespace inventory_managment_system
 {
     public partial class Signup : Form
     {
@@ -33,31 +23,54 @@ namespace inventory_managment_system
 
             this.Close();
         }
-        
+
         private void btnsignup_Click(object sender, EventArgs e)
         {
             filestream = new FileStream("users.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             sw = new StreamWriter(filestream);
+            sr = new StreamReader(filestream);
+            string record;
+            string[] field;
+            bool usercheck = true;
+            while ((record = sr.ReadLine()) != null)
+            {
+                field = record.Split(',');
+                if (field[2] == txtusername.Text)
+                {
+                    usercheck = false;
+                    break;
+                }
+            }
 
             if (txtfname.Text != "" && txtlname.Text != "" && txtemail.Text != "" && txtpassword.Text != "" && txtcpassword.Text != "" && txtusername.Text != "")
             {
-                if (txtpassword.Text == txtcpassword.Text)
+                if (usercheck)
                 {
-                    txtcpassword.BackColor = Color.White;
-                    sw.WriteLine($"{txtfname.Text},{txtlname.Text},{txtusername.Text},{txtemail.Text},{txtpassword.Text}");
-                    sw.Flush();
-                    filestream.Flush();
-                    products products = new products();
-                    products.ShowDialog();
-                    this.Close();
+
+                    if (txtpassword.Text == txtcpassword.Text)
+                    {
+                        txtcpassword.BackColor = Color.White;
+                        sw.WriteLine($"{txtfname.Text},{txtlname.Text},{txtusername.Text},{txtemail.Text},{txtpassword.Text}");
+                        sw.Close();
+                        filestream.Close();
+                        products products = new products();
+                        products.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("please confirm Right pass");
+                        txtcpassword.BackColor = Color.Red;
+                        sw.Flush();
+                        filestream.Flush();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("please confirm Right pass");
-                    txtcpassword.BackColor = Color.Red;
-                    sw.Flush( );
-                    filestream.Flush();
+                    txtusername.BackColor = Color.Red;
+                    MessageBox.Show("this username already exist");
                 }
+
 
             }
             else
@@ -114,10 +127,9 @@ namespace inventory_managment_system
                 filestream.Flush();
                 MessageBox.Show("please enter all information", "error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-
-            sw.Close();
+            sr.Close();
             filestream.Close();
-            
+
 
         }
 

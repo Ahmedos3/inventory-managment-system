@@ -30,9 +30,11 @@
         {
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(products));
             panel1 = new Panel();
             btnClose = new Button();
@@ -41,12 +43,17 @@
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             producttable = new DataGridView();
+            ID = new DataGridViewTextBoxColumn();
+            name = new DataGridViewTextBoxColumn();
+            Quntity = new DataGridViewTextBoxColumn();
+            Price = new DataGridViewTextBoxColumn();
             btnopen = new Button();
             category = new ComboBox();
             btnEdit = new Button();
             btnDelete = new Button();
             btnADD = new Button();
             panel4 = new Panel();
+            pictureBox2 = new PictureBox();
             l_addproduct = new Label();
             t_pPRICE = new TextBox();
             t_pQTY = new TextBox();
@@ -62,15 +69,13 @@
             tipAdd = new ToolTip(components);
             tipDelete = new ToolTip(components);
             tipCategory = new ToolTip(components);
-            ID = new DataGridViewTextBoxColumn();
-            name = new DataGridViewTextBoxColumn();
-            Quntity = new DataGridViewTextBoxColumn();
-            Price = new DataGridViewTextBoxColumn();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)producttable).BeginInit();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -151,16 +156,74 @@
             // 
             producttable.AllowUserToResizeColumns = false;
             producttable.BackgroundColor = Color.White;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            producttable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             producttable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             producttable.Columns.AddRange(new DataGridViewColumn[] { ID, name, Quntity, Price });
             producttable.Cursor = Cursors.Hand;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            producttable.DefaultCellStyle = dataGridViewCellStyle6;
             producttable.EditMode = DataGridViewEditMode.EditProgrammatically;
             producttable.Location = new Point(21, 17);
             producttable.Margin = new Padding(4, 3, 4, 3);
             producttable.Name = "producttable";
             producttable.ReadOnly = true;
-            producttable.Size = new Size(520, 417);
+            producttable.Size = new Size(520, 421);
             producttable.TabIndex = 1;
+            // 
+            // ID
+            // 
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            ID.DefaultCellStyle = dataGridViewCellStyle2;
+            ID.HeaderText = "ID";
+            ID.Name = "ID";
+            ID.ReadOnly = true;
+            // 
+            // name
+            // 
+            name.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            name.DefaultCellStyle = dataGridViewCellStyle3;
+            name.HeaderText = "name";
+            name.Name = "name";
+            name.ReadOnly = true;
+            // 
+            // Quntity
+            // 
+            Quntity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Quntity.DefaultCellStyle = dataGridViewCellStyle4;
+            Quntity.HeaderText = "Quntity";
+            Quntity.Name = "Quntity";
+            Quntity.ReadOnly = true;
+            // 
+            // Price
+            // 
+            Price.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Price.DefaultCellStyle = dataGridViewCellStyle5;
+            Price.HeaderText = "Price";
+            Price.Name = "Price";
+            Price.ReadOnly = true;
             // 
             // btnopen
             // 
@@ -169,7 +232,7 @@
             btnopen.FlatStyle = FlatStyle.Popup;
             btnopen.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnopen.ForeColor = Color.White;
-            btnopen.Location = new Point(47, 369);
+            btnopen.Location = new Point(47, 367);
             btnopen.Margin = new Padding(4, 3, 4, 3);
             btnopen.Name = "btnopen";
             btnopen.Size = new Size(155, 42);
@@ -188,7 +251,7 @@
             category.ForeColor = Color.White;
             category.FormattingEnabled = true;
             category.Items.AddRange(new object[] { "laptops", "taplets", "phones", "headsets" });
-            category.Location = new Point(85, 306);
+            category.Location = new Point(47, 307);
             category.Margin = new Padding(4, 3, 4, 3);
             category.Name = "category";
             category.Size = new Size(271, 26);
@@ -203,7 +266,7 @@
             btnEdit.FlatStyle = FlatStyle.Popup;
             btnEdit.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEdit.ForeColor = Color.White;
-            btnEdit.Location = new Point(47, 445);
+            btnEdit.Location = new Point(47, 440);
             btnEdit.Margin = new Padding(4, 3, 4, 3);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(155, 42);
@@ -221,7 +284,7 @@
             btnDelete.FlatStyle = FlatStyle.Popup;
             btnDelete.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(233, 445);
+            btnDelete.Location = new Point(233, 440);
             btnDelete.Margin = new Padding(4, 3, 4, 3);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(155, 42);
@@ -239,7 +302,7 @@
             btnADD.FlatStyle = FlatStyle.Popup;
             btnADD.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnADD.ForeColor = Color.White;
-            btnADD.Location = new Point(233, 369);
+            btnADD.Location = new Point(233, 367);
             btnADD.Margin = new Padding(4, 3, 4, 3);
             btnADD.Name = "btnADD";
             btnADD.Size = new Size(155, 42);
@@ -251,6 +314,7 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(pictureBox2);
             panel4.Controls.Add(btnDelete);
             panel4.Controls.Add(btnEdit);
             panel4.Controls.Add(btnopen);
@@ -270,6 +334,19 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(455, 508);
             panel4.TabIndex = 4;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Enabled = false;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(326, 307);
+            pictureBox2.Margin = new Padding(4, 3, 4, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(62, 26);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 10;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // l_addproduct
             // 
@@ -330,6 +407,7 @@
             t_pID.Name = "t_pID";
             t_pID.Size = new Size(218, 26);
             t_pID.TabIndex = 5;
+            t_pID.KeyDown += t_pID_KeyDown;
             // 
             // label7
             // 
@@ -391,47 +469,6 @@
             label1.TabIndex = 5;
             label1.Text = "Product List";
             // 
-            // ID
-            // 
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            ID.DefaultCellStyle = dataGridViewCellStyle1;
-            ID.HeaderText = "ID";
-            ID.Name = "ID";
-            ID.ReadOnly = true;
-            // 
-            // name
-            // 
-            name.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            name.DefaultCellStyle = dataGridViewCellStyle2;
-            name.HeaderText = "name";
-            name.Name = "name";
-            name.ReadOnly = true;
-            // 
-            // Quntity
-            // 
-            Quntity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Quntity.DefaultCellStyle = dataGridViewCellStyle3;
-            Quntity.HeaderText = "Quntity";
-            Quntity.Name = "Quntity";
-            Quntity.ReadOnly = true;
-            // 
-            // Price
-            // 
-            Price.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Price.DefaultCellStyle = dataGridViewCellStyle4;
-            Price.HeaderText = "Price";
-            Price.Name = "Price";
-            Price.ReadOnly = true;
-            // 
             // products
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -447,7 +484,7 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "products";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form2";
+            Text = "products";
             Load += accounts_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -456,6 +493,7 @@
             ((System.ComponentModel.ISupportInitialize)producttable).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -490,9 +528,11 @@
         private System.Windows.Forms.ToolTip tipAdd;
         private System.Windows.Forms.ToolTip tipDelete;
         private System.Windows.Forms.ToolTip tipCategory;
+        private System.Drawing.Printing.PrintDocument printDocument1;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn Quntity;
         private DataGridViewTextBoxColumn Price;
+        private PictureBox pictureBox2;
     }
 }
