@@ -137,5 +137,53 @@
         {
 
         }
+
+        private void txtfname_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtlname.Focus();
+            }
+        }
+
+        private void txtlname_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtusername.Focus();
+            }
+        }
+
+        private void txtusername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtemail.Focus();
+            }
+        }
+
+        private void txtemail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtpassword.Focus();
+            }
+        }
+
+        private void txtpassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtcpassword.Focus();
+            }
+        }
+
+        private void txtcpassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnsignup_Click(sender, e);
+            }
+        }
     }
 }

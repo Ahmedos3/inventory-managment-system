@@ -135,6 +135,7 @@
             txtlname.Name = "txtlname";
             txtlname.Size = new Size(156, 26);
             txtlname.TabIndex = 14;
+            txtlname.KeyDown += txtlname_KeyDown;
             // 
             // txtfname
             // 
@@ -146,6 +147,7 @@
             txtfname.Name = "txtfname";
             txtfname.Size = new Size(153, 26);
             txtfname.TabIndex = 13;
+            txtfname.KeyDown += txtfname_KeyDown;
             // 
             // label4
             // 
@@ -167,6 +169,7 @@
             txtemail.Name = "txtemail";
             txtemail.Size = new Size(336, 26);
             txtemail.TabIndex = 18;
+            txtemail.KeyDown += txtemail_KeyDown;
             // 
             // txtpassword
             // 
@@ -178,6 +181,7 @@
             txtpassword.Size = new Size(336, 26);
             txtpassword.TabIndex = 19;
             txtpassword.Tag = "";
+            txtpassword.KeyDown += txtpassword_KeyDown;
             // 
             // txtcpassword
             // 
@@ -190,6 +194,7 @@
             txtcpassword.TabIndex = 20;
             txtcpassword.Tag = "";
             txtcpassword.TextChanged += txtcpassword_TextChanged;
+            txtcpassword.KeyDown += txtcpassword_KeyDown;
             // 
             // label1
             // 
@@ -254,6 +259,7 @@
             txtusername.Name = "txtusername";
             txtusername.Size = new Size(336, 26);
             txtusername.TabIndex = 26;
+            txtusername.KeyDown += txtusername_KeyDown;
             // 
             // Signup
             // 

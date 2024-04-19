@@ -383,6 +383,7 @@
             t_pQTY.Name = "t_pQTY";
             t_pQTY.Size = new Size(218, 27);
             t_pQTY.TabIndex = 7;
+            t_pQTY.KeyDown += t_pQTY_KeyDown;
             // 
             // t_pName
             // 
@@ -395,6 +396,7 @@
             t_pName.Name = "t_pName";
             t_pName.Size = new Size(218, 27);
             t_pName.TabIndex = 6;
+            t_pName.KeyDown += t_pName_KeyDown;
             // 
             // t_pID
             // 
@@ -485,7 +487,6 @@
             Name = "products";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "products";
-            Load += accounts_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

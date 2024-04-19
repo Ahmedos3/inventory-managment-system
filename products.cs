@@ -283,11 +283,6 @@ namespace inventory_managment_system
             tipEdit.Show("chose category", category);
         }
 
-        private void accounts_Load(object sender, EventArgs e)
-        {
-            t_pName.KeyDown += t_pName_KeyDown;
-        }
-
         private void t_pID_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -303,6 +298,13 @@ namespace inventory_managment_system
             }
         }
 
+        private void t_pQTY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                t_pPRICE.Focus();
+            }
+        }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             DGVPrinter printer = new DGVPrinter();
@@ -318,5 +320,6 @@ namespace inventory_managment_system
             printer.PrintDataGridView(producttable);
 
         }
+
     }
 }
