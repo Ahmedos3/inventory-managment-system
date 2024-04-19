@@ -44,6 +44,7 @@ namespace inventory_managment_system
             l_reset = new Label();
             label4 = new Label();
             label6 = new Label();
+            folderBrowserDialog1 = new FolderBrowserDialog();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -83,7 +84,6 @@ namespace inventory_managment_system
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // label3
             // 
@@ -96,7 +96,6 @@ namespace inventory_managment_system
             label3.Size = new Size(77, 38);
             label3.TabIndex = 6;
             label3.Text = "iMs";
-            label3.Click += label3_Click;
             // 
             // btnlogin
             // 
@@ -162,6 +161,7 @@ namespace inventory_managment_system
             txtpass.Size = new Size(343, 26);
             txtpass.TabIndex = 4;
             txtpass.UseSystemPasswordChar = true;
+            txtpass.KeyDown += txtpass_KeyDown;
             // 
             // btnClose
             // 
@@ -266,5 +266,6 @@ namespace inventory_managment_system
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private FolderBrowserDialog folderBrowserDialog1;
     }
 }

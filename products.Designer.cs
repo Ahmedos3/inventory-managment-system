@@ -70,6 +70,7 @@
             tipDelete = new ToolTip(components);
             tipCategory = new ToolTip(components);
             printDocument1 = new System.Drawing.Printing.PrintDocument();
+            tipprint = new ToolTip(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -347,6 +348,7 @@
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
+            pictureBox2.MouseHover += pictureBox2_MouseHover;
             // 
             // l_addproduct
             // 
@@ -535,5 +537,6 @@
         private DataGridViewTextBoxColumn Quntity;
         private DataGridViewTextBoxColumn Price;
         private PictureBox pictureBox2;
+        private ToolTip tipprint;
     }
 }

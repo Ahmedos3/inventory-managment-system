@@ -321,5 +321,9 @@ namespace inventory_managment_system
 
         }
 
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+
+        }
     }
 }
