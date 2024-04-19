@@ -33,27 +33,27 @@ namespace inventory_managment_system
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             panel1 = new Panel();
             label5 = new Label();
-            pictureBox1 = new PictureBox();
+            logo = new PictureBox();
             label3 = new Label();
             btnlogin = new Button();
-            label1 = new Label();
-            label2 = new Label();
+            l_user = new Label();
+            l_pass = new Label();
             txtuser = new TextBox();
             txtpass = new TextBox();
             btnClose = new Button();
             l_reset = new Label();
-            label4 = new Label();
-            label6 = new Label();
+            l_signup = new Label();
+            l_login = new Label();
             folderBrowserDialog1 = new FolderBrowserDialog();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(2, 96, 129);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(logo);
             panel1.Controls.Add(label3);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -74,16 +74,16 @@ namespace inventory_managment_system
             label5.TabIndex = 8;
             label5.Text = "inventory mangment system";
             // 
-            // pictureBox1
+            // logo
             // 
-            pictureBox1.Image = Properties.Resources.inventory_12141389;
-            pictureBox1.Location = new Point(14, 164);
-            pictureBox1.Margin = new Padding(4, 3, 4, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(250, 222);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            logo.Image = Properties.Resources.inventory_12141389;
+            logo.Location = new Point(14, 164);
+            logo.Margin = new Padding(4, 3, 4, 3);
+            logo.Name = "logo";
+            logo.Size = new Size(250, 222);
+            logo.SizeMode = PictureBoxSizeMode.Zoom;
+            logo.TabIndex = 0;
+            logo.TabStop = false;
             // 
             // label3
             // 
@@ -113,29 +113,29 @@ namespace inventory_managment_system
             btnlogin.UseVisualStyleBackColor = false;
             btnlogin.Click += btnlogin_Click;
             // 
-            // label1
+            // l_user
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(2, 96, 129);
-            label1.Location = new Point(356, 148);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(117, 23);
-            label1.TabIndex = 1;
-            label1.Text = "username";
+            l_user.AutoSize = true;
+            l_user.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            l_user.ForeColor = Color.FromArgb(2, 96, 129);
+            l_user.Location = new Point(356, 148);
+            l_user.Margin = new Padding(4, 0, 4, 0);
+            l_user.Name = "l_user";
+            l_user.Size = new Size(117, 23);
+            l_user.TabIndex = 1;
+            l_user.Text = "username";
             // 
-            // label2
+            // l_pass
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(2, 96, 129);
-            label2.Location = new Point(356, 257);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(112, 23);
-            label2.TabIndex = 2;
-            label2.Text = "password";
+            l_pass.AutoSize = true;
+            l_pass.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            l_pass.ForeColor = Color.FromArgb(2, 96, 129);
+            l_pass.Location = new Point(356, 257);
+            l_pass.Margin = new Padding(4, 0, 4, 0);
+            l_pass.Name = "l_pass";
+            l_pass.Size = new Size(112, 23);
+            l_pass.TabIndex = 2;
+            l_pass.Text = "password";
             // 
             // txtuser
             // 
@@ -192,33 +192,33 @@ namespace inventory_managment_system
             l_reset.Text = "Reset";
             l_reset.Click += l_reset_Click;
             // 
-            // label4
+            // l_signup
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.White;
-            label4.Cursor = Cursors.Hand;
-            label4.FlatStyle = FlatStyle.Popup;
-            label4.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(2, 96, 129);
-            label4.Location = new Point(396, 421);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(93, 23);
-            label4.TabIndex = 9;
-            label4.Text = "Sign Up";
-            label4.Click += label4_Click;
+            l_signup.AutoSize = true;
+            l_signup.BackColor = Color.White;
+            l_signup.Cursor = Cursors.Hand;
+            l_signup.FlatStyle = FlatStyle.Popup;
+            l_signup.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            l_signup.ForeColor = Color.FromArgb(2, 96, 129);
+            l_signup.Location = new Point(396, 421);
+            l_signup.Margin = new Padding(4, 0, 4, 0);
+            l_signup.Name = "l_signup";
+            l_signup.Size = new Size(93, 23);
+            l_signup.TabIndex = 9;
+            l_signup.Text = "Sign Up";
+            l_signup.Click += label4_Click;
             // 
-            // label6
+            // l_login
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.FromArgb(2, 96, 129);
-            label6.Location = new Point(442, 59);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(126, 38);
-            label6.TabIndex = 10;
-            label6.Text = "Log in";
+            l_login.AutoSize = true;
+            l_login.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            l_login.ForeColor = Color.FromArgb(2, 96, 129);
+            l_login.Location = new Point(442, 59);
+            l_login.Margin = new Padding(4, 0, 4, 0);
+            l_login.Name = "l_login";
+            l_login.Size = new Size(126, 38);
+            l_login.TabIndex = 10;
+            l_login.Text = "Log in";
             // 
             // login
             // 
@@ -227,14 +227,14 @@ namespace inventory_managment_system
             AutoSize = true;
             BackColor = Color.White;
             ClientSize = new Size(757, 486);
-            Controls.Add(label6);
-            Controls.Add(label4);
+            Controls.Add(l_login);
+            Controls.Add(l_signup);
             Controls.Add(l_reset);
             Controls.Add(btnClose);
             Controls.Add(btnlogin);
-            Controls.Add(label2);
+            Controls.Add(l_pass);
             Controls.Add(txtpass);
-            Controls.Add(label1);
+            Controls.Add(l_user);
             Controls.Add(panel1);
             Controls.Add(txtuser);
             FormBorderStyle = FormBorderStyle.None;
@@ -246,7 +246,7 @@ namespace inventory_managment_system
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -256,16 +256,16 @@ namespace inventory_managment_system
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label l_pass;
+        private System.Windows.Forms.Label l_user;
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label l_reset;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label l_signup;
+        private System.Windows.Forms.Label l_login;
         private FolderBrowserDialog folderBrowserDialog1;
     }
 }

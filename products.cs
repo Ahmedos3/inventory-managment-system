@@ -87,7 +87,7 @@ namespace inventory_managment_system
             btnADD.Enabled = true;
             btnEdit.Enabled = true;
             btnDelete.Enabled = true;
-            pictureBox2.Enabled = true;
+            btn_print.Enabled = true;
             opencheck = true;
             MessageBox.Show("file opened", "excellent", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
@@ -261,26 +261,26 @@ namespace inventory_managment_system
 
         private void btnopen_MouseHover(object sender, EventArgs e)
         {
-            tipEdit.Show("open the category file", btnopen);
+            tip.Show("open the category file", btnopen);
         }
         private void btnADD_MouseHover(object sender, EventArgs e)
         {
-            tipEdit.Show("add new product", btnADD);
+            tip.Show("add new product", btnADD);
         }
 
         private void btnEdit_MouseHover(object sender, EventArgs e)
         {
-            tipEdit.Show("Write Product ID to Edit (name,price,quntity)", btnEdit);
+            tip.Show("Write Product ID to Edit (name,price,quntity)", btnEdit);
         }
 
         private void btnDelete_MouseHover(object sender, EventArgs e)
         {
-            tipEdit.Show("Delete product ", btnDelete);
+            tip.Show("Delete product ", btnDelete);
         }
 
         private void category_MouseHover(object sender, EventArgs e)
         {
-            tipEdit.Show("chose category", category);
+            tip.Show("chose category", category);
         }
 
         private void t_pID_KeyDown(object sender, KeyEventArgs e)
@@ -323,7 +323,7 @@ namespace inventory_managment_system
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
-
+            tip.Show("print inventory data", btn_print);
         }
     }
 }

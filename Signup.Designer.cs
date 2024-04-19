@@ -30,49 +30,49 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signup));
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
+            pic_signup = new PictureBox();
             label5 = new Label();
-            label3 = new Label();
+            companyname = new Label();
             btnClose = new Button();
             btnSignup = new Button();
             txtlname = new TextBox();
             txtfname = new TextBox();
-            label4 = new Label();
+            l_signup = new Label();
             txtemail = new TextBox();
             txtpassword = new TextBox();
             txtcpassword = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
+            l_fname = new Label();
+            l_lname = new Label();
+            l_email = new Label();
+            l_pass = new Label();
+            l_passconfirm = new Label();
             l_username = new Label();
             txtusername = new TextBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_signup).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(2, 96, 129);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(pic_signup);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(label3);
+            panel1.Controls.Add(companyname);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(250, 419);
             panel1.TabIndex = 9;
             // 
-            // pictureBox1
+            // pic_signup
             // 
-            pictureBox1.Image = Properties.Resources.user;
-            pictureBox1.Location = new Point(36, 181);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(159, 130);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pic_signup.Image = Properties.Resources.user;
+            pic_signup.Location = new Point(36, 181);
+            pic_signup.Name = "pic_signup";
+            pic_signup.Size = new Size(159, 130);
+            pic_signup.SizeMode = PictureBoxSizeMode.Zoom;
+            pic_signup.TabIndex = 0;
+            pic_signup.TabStop = false;
             // 
             // label5
             // 
@@ -85,16 +85,16 @@
             label5.TabIndex = 18;
             label5.Text = "inventory mangment system";
             // 
-            // label3
+            // companyname
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(75, 53);
-            label3.Name = "label3";
-            label3.Size = new Size(77, 38);
-            label3.TabIndex = 16;
-            label3.Text = "iMs";
+            companyname.AutoSize = true;
+            companyname.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            companyname.ForeColor = Color.White;
+            companyname.Location = new Point(75, 53);
+            companyname.Name = "companyname";
+            companyname.Size = new Size(77, 38);
+            companyname.TabIndex = 16;
+            companyname.Text = "iMs";
             // 
             // btnClose
             // 
@@ -149,16 +149,16 @@
             txtfname.TabIndex = 13;
             txtfname.KeyDown += txtfname_KeyDown;
             // 
-            // label4
+            // l_signup
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(2, 96, 129);
-            label4.Location = new Point(371, 34);
-            label4.Name = "label4";
-            label4.Size = new Size(155, 38);
-            label4.TabIndex = 17;
-            label4.Text = "Sign Up";
+            l_signup.AutoSize = true;
+            l_signup.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            l_signup.ForeColor = Color.FromArgb(2, 96, 129);
+            l_signup.Location = new Point(371, 34);
+            l_signup.Name = "l_signup";
+            l_signup.Size = new Size(155, 38);
+            l_signup.TabIndex = 17;
+            l_signup.Text = "Sign Up";
             // 
             // txtemail
             // 
@@ -196,50 +196,50 @@
             txtcpassword.TextChanged += txtcpassword_TextChanged;
             txtcpassword.KeyDown += txtcpassword_KeyDown;
             // 
-            // label1
+            // l_fname
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(279, 83);
-            label1.Name = "label1";
-            label1.Size = new Size(68, 13);
-            label1.TabIndex = 21;
-            label1.Text = "First Name";
+            l_fname.AutoSize = true;
+            l_fname.Location = new Point(279, 83);
+            l_fname.Name = "l_fname";
+            l_fname.Size = new Size(68, 13);
+            l_fname.TabIndex = 21;
+            l_fname.Text = "First Name";
             // 
-            // label2
+            // l_lname
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(459, 83);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 13);
-            label2.TabIndex = 22;
-            label2.Text = "Last Name";
+            l_lname.AutoSize = true;
+            l_lname.Location = new Point(459, 83);
+            l_lname.Name = "l_lname";
+            l_lname.Size = new Size(67, 13);
+            l_lname.TabIndex = 22;
+            l_lname.Text = "Last Name";
             // 
-            // label6
+            // l_email
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(280, 190);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 13);
-            label6.TabIndex = 23;
-            label6.Text = "Email";
+            l_email.AutoSize = true;
+            l_email.Location = new Point(280, 190);
+            l_email.Name = "l_email";
+            l_email.Size = new Size(38, 13);
+            l_email.TabIndex = 23;
+            l_email.Text = "Email";
             // 
-            // label7
+            // l_pass
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(280, 244);
-            label7.Name = "label7";
-            label7.Size = new Size(61, 13);
-            label7.TabIndex = 24;
-            label7.Text = "Password";
+            l_pass.AutoSize = true;
+            l_pass.Location = new Point(280, 244);
+            l_pass.Name = "l_pass";
+            l_pass.Size = new Size(61, 13);
+            l_pass.TabIndex = 24;
+            l_pass.Text = "Password";
             // 
-            // label8
+            // l_passconfirm
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(280, 298);
-            label8.Name = "label8";
-            label8.Size = new Size(111, 13);
-            label8.TabIndex = 25;
-            label8.Text = "Password Confirm";
+            l_passconfirm.AutoSize = true;
+            l_passconfirm.Location = new Point(280, 298);
+            l_passconfirm.Name = "l_passconfirm";
+            l_passconfirm.Size = new Size(111, 13);
+            l_passconfirm.TabIndex = 25;
+            l_passconfirm.Text = "Password Confirm";
             // 
             // l_username
             // 
@@ -269,15 +269,15 @@
             ClientSize = new Size(639, 419);
             Controls.Add(l_username);
             Controls.Add(txtusername);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(l_passconfirm);
+            Controls.Add(l_pass);
+            Controls.Add(l_email);
+            Controls.Add(l_lname);
+            Controls.Add(l_fname);
             Controls.Add(txtcpassword);
             Controls.Add(txtpassword);
             Controls.Add(txtemail);
-            Controls.Add(label4);
+            Controls.Add(l_signup);
             Controls.Add(panel1);
             Controls.Add(btnClose);
             Controls.Add(btnSignup);
@@ -293,7 +293,7 @@
             Load += signup_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_signup).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -301,22 +301,22 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_signup;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label companyname;
         private System.Windows.Forms.Button btnSignup;
         private System.Windows.Forms.TextBox txtlname;
         private System.Windows.Forms.TextBox txtfname;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label l_signup;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.TextBox txtcpassword;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label l_fname;
+        private System.Windows.Forms.Label l_lname;
+        private System.Windows.Forms.Label l_email;
+        private System.Windows.Forms.Label l_pass;
+        private System.Windows.Forms.Label l_passconfirm;
         private System.Windows.Forms.Label l_username;
         private System.Windows.Forms.TextBox txtusername;
     }
