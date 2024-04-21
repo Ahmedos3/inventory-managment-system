@@ -193,7 +193,6 @@
             txtcpassword.Size = new Size(336, 26);
             txtcpassword.TabIndex = 20;
             txtcpassword.Tag = "";
-            txtcpassword.TextChanged += txtcpassword_TextChanged;
             txtcpassword.KeyDown += txtcpassword_KeyDown;
             // 
             // l_fname

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(products));
             panel_form = new Panel();
             btnClose = new Button();
@@ -152,25 +152,25 @@
             // 
             producttable.AllowUserToResizeColumns = false;
             producttable.BackgroundColor = Color.White;
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = Color.White;
-            dataGridViewCellStyle13.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle13.ForeColor = Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
-            producttable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            producttable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             producttable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             producttable.Columns.AddRange(new DataGridViewColumn[] { ID, name, Quntity, Price });
             producttable.Cursor = Cursors.Hand;
-            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = Color.White;
-            dataGridViewCellStyle18.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle18.ForeColor = Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.False;
-            producttable.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            producttable.DefaultCellStyle = dataGridViewCellStyle6;
             producttable.EditMode = DataGridViewEditMode.EditProgrammatically;
             producttable.Location = new Point(21, 17);
             producttable.Margin = new Padding(4, 3, 4, 3);
@@ -182,11 +182,11 @@
             // ID
             // 
             ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = Color.White;
-            dataGridViewCellStyle14.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
-            ID.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            ID.DefaultCellStyle = dataGridViewCellStyle2;
             ID.HeaderText = "ID";
             ID.Name = "ID";
             ID.ReadOnly = true;
@@ -194,9 +194,9 @@
             // name
             // 
             name.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            name.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            name.DefaultCellStyle = dataGridViewCellStyle3;
             name.HeaderText = "name";
             name.Name = "name";
             name.ReadOnly = true;
@@ -204,9 +204,9 @@
             // Quntity
             // 
             Quntity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Quntity.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Quntity.DefaultCellStyle = dataGridViewCellStyle4;
             Quntity.HeaderText = "Quntity";
             Quntity.Name = "Quntity";
             Quntity.ReadOnly = true;
@@ -214,9 +214,9 @@
             // Price
             // 
             Price.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Price.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Price.DefaultCellStyle = dataGridViewCellStyle5;
             Price.HeaderText = "Price";
             Price.Name = "Price";
             Price.ReadOnly = true;
@@ -246,7 +246,7 @@
             category.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             category.ForeColor = Color.White;
             category.FormattingEnabled = true;
-            category.Items.AddRange(new object[] { "laptops", "taplets", "phones", "headsets" });
+            category.Items.AddRange(new object[] { "laptop", "taplet", "phone", "headset" });
             category.Location = new Point(47, 307);
             category.Margin = new Padding(4, 3, 4, 3);
             category.Name = "category";
@@ -350,7 +350,7 @@
             l_addproduct.AutoSize = true;
             l_addproduct.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             l_addproduct.ForeColor = Color.FromArgb(2, 96, 129);
-            l_addproduct.Location = new Point(120, 10);
+            l_addproduct.Location = new Point(122, 11);
             l_addproduct.Margin = new Padding(4, 0, 4, 0);
             l_addproduct.Name = "l_addproduct";
             l_addproduct.Size = new Size(156, 25);
@@ -401,7 +401,7 @@
             t_pID.BorderStyle = BorderStyle.FixedSingle;
             t_pID.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             t_pID.ForeColor = Color.White;
-            t_pID.Location = new Point(208, 53);
+            t_pID.Location = new Point(208, 54);
             t_pID.Margin = new Padding(4, 3, 4, 3);
             t_pID.Name = "t_pID";
             t_pID.Size = new Size(218, 26);

@@ -47,21 +47,9 @@ namespace inventory_managment_system
 
             producttable.Rows.Clear(); // to delete data form gride for open new category
             //chose category and define the filename to save data for each category
-            if (category.Text == "laptops")
+            if (category.SelectedItem != null)
             {
-                filename = "p_laptop.txt";
-            }
-            else if (category.Text == "taplets")
-            {
-                filename = "p_taplets.txt";
-            }
-            else if (category.Text == "phones")
-            {
-                filename = "P_phones.txt";
-            }
-            else if (category.Text == "headsets")
-            {
-                filename = "p_headsets.txt";
+                filename = "p_" + category.Text + ".txt";
             }
             else
             {

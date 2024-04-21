@@ -16,7 +16,6 @@ namespace inventory_managment_system
         private void Form1_Load(object sender, EventArgs e)
         {
             txtuser.Focus();
-
         }
 
         private void l_reset_Click(object sender, EventArgs e)
